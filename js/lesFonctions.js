@@ -18,3 +18,25 @@ function AfficherFromation(numero){
             }        
     );
 }
+
+
+function AfficherActions(codeFormation){
+    $.ajax
+    (
+      {
+         type:'get',
+         url:"index.php/Ctrl_sncf/afficherAgents",
+         data:"codeFormation="+codeFormation,
+        success:function(data)
+                {
+                    $('#divAgents').empty();
+                    $('#divAgents').append(data);
+                },
+                error:function()
+                {
+                   alert("Impossiblie de recuperer");
+                }
+  
+            }        
+    );
+}

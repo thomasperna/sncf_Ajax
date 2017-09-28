@@ -12,8 +12,26 @@
                                 function(){
                                     AfficherFromation($(this).val());
                                 }) ;                       
-                    }
-            
+   
+                        $('#divForm').change(
+                             function(){
+                                  var rdo = document.getElementsByName('rdoFrom');
+                                     if(rdo[0].checked){
+                                        AfficherActions(rdo[0].value);
+                                      }
+                                      if(rdo[1].checked){
+                                        AfficherActions(rdo[1].value);
+                                      }
+                                      if(rdo[2].checked){
+                                        AfficherActions(rdo[2].value);
+                                      }
+                                      if(rdo[3].checked){
+                                        AfficherActions(rdo[3].value);
+                                      }
+                                   
+                             });
+                   
+            }
             );
             
         </script>
@@ -28,6 +46,9 @@
        
        ?>   
         </select>
+        <br>
+        <br>
         <div id="divForm"></div>
+        <div id="divAgents"></div>
     </body>
 </html>
