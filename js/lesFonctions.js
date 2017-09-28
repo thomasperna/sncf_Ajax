@@ -3,12 +3,12 @@ function AfficherFromation(numero){
     (
       {
          type:'get',
-         url:"index.php/Ctrl_Demo/afficherFormation",
+         url:"index.php/Ctrl_sncf/afficherFormation",
          data:"numero="+numero,
         success:function(data)
                 {
                     $('#divForm').empty();
-                    $('#divFrom').append(data);
+                    $('#divForm').append(data);
                 },
                 error:function()
                 {

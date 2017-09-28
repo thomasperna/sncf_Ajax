@@ -10,7 +10,7 @@
      
      public function afficherFormation(){
           //$numero= $this->uri->segment(3);
-        $numero =$_GET('numero');
+        $numero =$_GET['numero'];
            $model=$this->load->model("Model_Form"); 
            $data["lesFormation"] = $this->Model_Form->getAllFormations($numero);
            $this->load->view('v_form',$data);
