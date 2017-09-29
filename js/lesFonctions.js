@@ -1,4 +1,4 @@
-function AfficherFromation(numero){
+function AfficherFormation(numero){
     $.ajax
     (
       {
@@ -18,25 +18,27 @@ function AfficherFromation(numero){
             }        
     );
 }
-
-
-function AfficherActions(codeFormation){
+function AfficherAgent(numeroFormation){
     $.ajax
     (
-      {
-         type:'get',
-         url:"index.php/Ctrl_sncf/afficherAgents",
-         data:"codeFormation="+codeFormation,
-        success:function(data)
+            {
+                type:'get',
+                url:"index.php/Ctrl_sncf/afficherAgent",
+                data:"numeroFormation="+numeroFormation,
+                succes:function(data)
                 {
                     $('#divAgents').empty();
                     $('#divAgents').append(data);
                 },
-                error:function()
-                {
-                   alert("Impossiblie de recuperer");
+                error:function(){
+                    alert("impossible de récupérer");
                 }
-  
-            }        
+            }
     );
 }
+
+   
+    
+
+
+
