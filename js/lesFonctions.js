@@ -25,7 +25,7 @@ function AfficherAgent(numeroFormation){
                 type:'get',
                 url:"index.php/Ctrl_sncf/afficherAgent",
                 data:"numeroFormation="+numeroFormation,
-                succes:function(data)
+                success:function(data)
                 {
                     $('#divAgents').empty();
                     $('#divAgents').append(data);

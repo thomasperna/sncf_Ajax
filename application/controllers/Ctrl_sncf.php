@@ -17,9 +17,9 @@
      }
      public function afficherAgent(){
          $code=$_GET['numeroFormation'];
-         $model=$this->load->model("Model_Agent");
-         $data["lesAgent"]=$this->Model_Agent->getAllAgents($numeroFormation);
-         $this->load->view('v_agent',$data);
+         $model=$this->load->model("Model_Agents");
+         $data["lesAgents"]=$this->Model_Agents->getAllAgents($code);
+         $this->load->view('v_agents',$data);
      }
      
      
