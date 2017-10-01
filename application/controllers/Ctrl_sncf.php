@@ -12,13 +12,13 @@
           //$numero= $this->uri->segment(3);
         $numero =$_GET['numero'];
            $model=$this->load->model("Model_Formation"); 
-           $data["lesFormation"] = $this->Model_Formation->getAllFormations($numero);
+           $data['lesFormation'] = $this->Model_Formation->getAllFormations($numero);
            $this->load->view('v_formation',$data);
      }
      public function afficherAgent(){
          $code=$_GET['numeroFormation'];
          $model=$this->load->model("Model_Agents");
-         $data["lesAgents"]=$this->Model_Agents->getAllAgents($code);
+         $data['lesAgents']=$this->Model_Agents->getAllAgents($code);
          $this->load->view('v_agents',$data);
      }
      
