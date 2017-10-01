@@ -1,5 +1,6 @@
 <?php
-foreach($lesAgents as $agent){
-    echo"<p>".$agent->nom."--".$agent->prenom."</p>";
-}
-?>
+        foreach ($lesAgents as $agent)      
+        {
+            echo $agent->prenom .$agent->nom;
+        }
+        ?> 

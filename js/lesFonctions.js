@@ -4,7 +4,7 @@ function AfficherFormation(numero){
       {
          type:'get',
          url:"index.php/Ctrl_sncf/afficherFormation",
-         data:"numero="+numero,
+         data:"numero="+$('#lstAct').val(),
         success:function(data)
                 {
                     $('#divForm').empty();
@@ -12,29 +12,31 @@ function AfficherFormation(numero){
                 },
                 error:function()
                 {
-                   alert("Impossiblie de recuperer");
+                   alert("Impossiblie de recupérer les formations");
                 }
   
             }        
     );
 }
-function AfficherAgent(numeroFormation){
-    $.ajax
-    (
+function AfficherAgent(numeroFormation)
+    {
+        $.ajax( 
             {
-                type:'get',
-                url:"index.php/Ctrl_sncf/afficherAgent",
-                data:"numeroFormation="+numeroFormation,
+                type:"get",
+                url:"index.php/Ctrl_sncf/AfficherLesAgents",
+                data:"numFormation="+numeroFormation,
                 success:function(data)
                 {
                     $('#divAgents').empty();
                     $('#divAgents').append(data);
                 },
-                error:function(){
-                    alert("impossible de récupérer");
+                error:function()
+                {
+                    alert('impossible de recuperer les agents');
                 }
-            }
-    );
+                
+                
+            });
 }
 
    
