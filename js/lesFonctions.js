@@ -12,7 +12,7 @@ function AfficherFormation(numero){
                 },
                 error:function()
                 {
-                   alert("Impossiblie de recupérer les formations");
+                   alert("Impossiblie de récupérer les formations");
                 }
   
             }        
@@ -23,7 +23,7 @@ function AfficherAgent(numeroFormation)
         $.ajax( 
             {
                 type:"get",
-                url:"index.php/Ctrl_sncf/AfficherLesAgents",
+                url:"index.php/Ctrl_sncf/afficherLesAgents",
                 data:"numFormation="+numeroFormation,
                 success:function(data)
                 {
@@ -32,12 +32,12 @@ function AfficherAgent(numeroFormation)
                 },
                 error:function()
                 {
-                    alert('impossible de recuperer les agents');
+                    alert('impossible de récupérer les agents');
                 }
                 
                 
             });
-}
+    }
 
    
     

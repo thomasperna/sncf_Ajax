@@ -15,10 +15,10 @@
            $data['lesFormation'] = $this->Model_Formation->getAllFormations($numero);
            $this->load->view('v_formation',$data);
      }
-     public function afficherAgent(){
-         $code=$_GET['numeroFormation'];
-         $model=$this->load->model("Model_Agents");
-         $data['lesAgents']=$this->Model_Agents->getAllAgents($code);
+     public function afficherLesAgents(){
+         $numeroFormation=$_GET['numFormation'];
+         $model=$this->load->model("Model_Agent");
+         $data['lesAgents']=$this->Model_Agent->getAllAgents($numeroFormation);
          $this->load->view('v_agents',$data);
      }
      
